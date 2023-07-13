@@ -1,2 +1,92 @@
-hello world
-905dda3b3bc21c759e4d4e2a8e30e497e7025f9a5328adab
+Certainly! Here's the updated code that uses a loop tort rclpyclpy
+from rclpy.node import Node
+from sensor_msgs.msg import Image
+from vision_msgs.msg import Detection2D, Detection2DArray, BoundingBox2D, ObjectHypothesisWithPose
+from jetson_inference import detectNet
+from jetson_utils import videoSource, Log
+
+class ObjectDetectionNode(Node):
+    def __init__(self):
+        super().__init__('object_detection_node')
+        self.declare_parameter('network', 'ssd-mobilenet-v2')
+        self.declare_parameter('overlay', 'box,labels,conf')
+        self.declare_parameter('threshold', 0.5)
+
+        self.net = None
+        self.overlay = self.get_parameter('overlay').get_parameter_value().string_value
+        self.threshold = self.get_parameter('threshold').get_parameter_value().double_value
+        self.publisher = self.create_publisher(Detection2DArray, 'detections', 10)
+
+        self.logger = Log()
+
+        # Create video source
+        self.video_source = videoSource()
+
+    def run(self):
+        # Load the object detection network
+        self.net = detectNet(self.get_parameter('network').get_parameter_value().string_value, threshold=self.threshold)
+
+        if not self.net:
+            self.logger.error("Failed to load detectNet model")
+            return
+
+        self.logger.log("Object Detection Node initialized")
+
+        # Process frames until interrupted
+        while rclpy.ok():
+            # Capture the next image from video source
+            img = self.video_source.Capture()
+
+            if img is not None:
+                # Detect objects in the image
+                detections = self.net.Detect(img, overlay=self.overlay)
+
+                # Create a Detection2DArray message
+                detection_msg = Detection2DArray()
+
+                for detection in detections:
+                    # Create a Detection2D message
+                    detection_2d = Detection2D()
+                    detection_2d.bbox = BoundingBox2D()
+                    detection_2d.results = [ObjectHypothesisWithPose()]
+
+                    # Set the bounding box coordinates
+                    detection_2d.bbox.center.x = detection.CenterX
+                    detection_2d.bbox.center.y = detection.CenterY
+                    detection_2d.bbox.size_x = detection.Width
+                    detection_2d.bbox.size_y = detection.Height
+
+                    # Set the class label and confidence
+                    detection_2d.results[0].id = detection.ClassID
+                    detection_2d.results[0].score = detection.Confidence
+
+                    # Add the Detection2D message to the Detection2DArray message
+                    detection_msg.detections.append(detection_2d)
+
+                # Publish the Detection2DArray message
+                self.publisher.publish(detection_msg)
+
+                # Print the detections
+                self.logger.log(f'Detected {len(detections)} objects in image')
+                for detection in detections:
+                    self.logger.log(str(detection))
+
+            # Handle ROS callbacks
+            rclpy.spin_once(self)
+
+        self.video_source.Close()
+        self.logger.log("Object Detection Node stopped")
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = ObjectDetectionNode()
+    node.run()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+`deo source is created in the `__init__` method, and the frames are continuously processed in the `run` method using a `while` loop. The loop checks for the availability of the next image from the video source and then performs object detection on the image. The detected objects are published as `Detection2DArray` messages. The loop also handles ROS callbacks using `rclpy.spin_once()` to ensure that other necessary callbacks are executed. The loop continues until the program is interrupted or `rclpy.ok()` returns `False`.
+
+Please make sure to adjust the code according to your specific requirements and dependencies.
