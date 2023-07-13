@@ -1,0 +1,406 @@
+ls
+docker
+cd run
+ls
+cd ..
+cd jetson-inference/
+ls
+cd ..
+cd ~
+ls
+cd opt
+cd /opt
+ls
+cd ros
+ls
+cd foxy
+ls
+ros
+ros2
+cd /
+find ros_deep_learning -type d
+cd jetson-inference/
+ls
+git submodule update --init
+cd plugins/
+ls
+cd .
+cd ..
+make
+cd c
+ls
+cd ..
+gazebo
+gazebo9
+cd ..
+ls
+/dev/video0
+sudo /dev/video0
+/dev/video0
+docker start
+exit
+cd jetson-inference/
+cd python/
+ls
+cd python/
+ls
+cd ..
+cd examples/
+ls
+cd ..
+ls
+cd docs/
+cd ..
+cd python/
+cd examples/
+./imagenet.py /dev/video0
+cd ..
+cd tools/
+./download-models.sh
+cd ..
+mkdir data
+cd data/
+mkdir networks
+cd ..
+cd tools/
+./download-models.sh
+cd ..
+cd python/
+cd examples/
+./imagenet.py /dev/video0
+cd ..
+cd data/
+cd networks/
+ls
+cd ..
+cd tools/
+cat download-models.
+cat download-models.sh
+./download-models.sh
+cd .
+cd ..
+cd data/
+cd networks/
+ls
+cd ..
+cd tools/
+./download-models.sh
+cd ..
+cd data/networks/
+ls
+cd ResNet-18/
+ls
+cd ..
+cd GoogleNet-ILSVRC12-subset/
+ls
+cat labels.txt 
+cd ..
+cd python/examples/
+./imagenet.py --network googlenet-12 /dev/video0
+./imagenet.py --network=googlenet-12 /dev/video0
+ifconfig
+xeyes
+cd ~
+apt update
+apt install xeyes
+apt install x11-apps
+xeyes
+ls
+exit
+cd ~
+cd Downloads
+ls
+cd ..
+ls
+cd home/
+lz
+ls
+cd ..
+apt install jupyter-lab
+apt install jupyterlab
+apt install jupyter_lab
+pip
+pip install juputerlab
+pip3
+pip3 install jupyterlab
+pip3 install setuptools ez_setup
+pip3 install unroll ez_setup
+pip3 install unroll 
+pip3 install ez_setup
+pip3 install unroll 
+pip3  install --trusted-host pypi.org --trusted-host files.pythonhosted.org unroll
+pip3 config --set ssl_verify False
+pip3 --set ssl_verify False
+pip3
+pip3  install --trusted-host pypi.org --trusted-host files.pythonhosted.org unroll
+pip3 install jupyternotebook
+pip install jupyternotebook
+exit
+pip3 install jupyterlab==2.2.9
+clear
+pip3 list
+pip list
+jupyterlab
+jupyternotebook
+apt install vim
+ls
+vim demo.py
+python3 demo.py 
+clear
+exit
+ls
+cd home/
+ls
+cd da
+cd ..
+cd jetson-inference/
+ls
+cd da1
+cd data/
+cd networks/
+ls
+exit
+ls
+exit
+vim demo.py 
+python3 demo.py 
+clear
+exit
+ls
+cd jetson-inference/
+ls
+history
+cd python/examples/
+./imagenet.py --network googlenet-12 /dev/video0 /home/data/output/output.mp4
+./imagenet.py --network resnet-18 /dev/video0 /home/data/output/output.mp4
+cd ..
+cd data/networks/
+ls
+cd ResNet-18/
+ls
+cd ..
+cd python/examples/
+./imagenet.py --network googlenet-12 /dev/video0
+ls
+./imagenet.py --network googlenet /dev/video0
+./imagenet.py /dev/video0
+cd ..
+cd data/networks/
+rm -r GoogleNet-ILSVRC12-subset/
+cd ..
+cd tools/
+ls
+./download-models.sh 
+cd ..
+cd python/examples/
+./imagenet.py --network=googlenet-12 /dev/video0
+cat imagenet.py 
+vim imagenet.py 
+vim -r imagenet.py 
+ls
+rm imagenet.py~
+ls
+vim imagenet.py 
+vim -r imagenet.py 
+rm imagenet.py.swp
+ls
+ls -l
+ls -ls
+vim -r imagenet.py 
+rm .imagenet.py.swp
+vim imagenet.py 
+clear
+vim imagenet.py 
+vim ~/.vimrc
+ls
+cd ~
+ls
+rm .vimrc
+cat .viminfo 
+clear
+cd /
+cd jetson-inference/python/examples/
+vim imagenet.py 
+cd /home/data/
+cat demo.txt 
+cd /jetson-inference/python/examples/
+cat imagenet.py 
+cp imagenet.py /home/data/
+cd /home/data/
+./imagenet.py --network=googlenet-12 /dev/video0
+ls
+cd /jetson-inference/python/examples/
+./imagenet.py --network=googlenet-12 /dev/video0
+docker
+python3
+ls
+cd /home/data/
+python3 imagenet.py --network=googlenet-12 /dev/video0
+jetson_clocks
+exit
+cd /home/data/
+python3 imagenet.py --network=googlenet-12 /dev/video0
+exit
+cd /home/data/
+python3 imagenet.py --network=googlenet-12 /dev/video0
+exit
+ls
+rm demo.py 
+cd home/data/
+ls
+cd /
+cd jetson-inference/tools/
+sh download-models.sh
+./download-models.sh 
+./detectnet.py --network=facenet /dev/video0 /home/data/output.mp4
+cd /jetson-inference/python/examples/
+./detectnet.py --network=facenet /dev/video0 /home/data/output.mp4
+./detectnet.py --network=ssd-mobilenet-v2 /dev/video0 /home/data/output.mp4
+apt install gdown
+apt update
+apt install gdown
+pip3 install gdown
+gdown https://drive.google.com/file/d/1H23YwtahatjIrmuww9pRtLPKcgiHuLeM/view?usp=drivesdk
+ls
+gdown https://drive.google.com/uc?id=1H23YwtahatjIrmuww9pRtLPKcgiHuLeM
+ls
+./detectnet.py --network=ssd-mobilenet-v2 walking.mp4 /home/data/output.mp4
+./segnet.py --network=fcn-resnet18-cityscapes images/city_0.jpg images/test/output.jpg
+./segnet.py --network=fcn-resnet18-cityscapes walking.mp4 /home/data/output.mp4
+./segnet.py --network=fcn-resnet18-voc images/object_0.jpg images/test/output.jpg
+gdown --help
+gdown --fuzzy https://drive.google.com/file/d/1MV-nRl6Fdrs3PY1dbe_EiomX4g8X55Fq/view?usp=drivesdk
+./segnet.py --network=fcn-resnet18-cityscapes cars.mp4 /home/data/output.mp4
+exit
+ls
+cd /home/data/examples 
+./depthnet.py walking.mp4 /home/data/output.mp4
+./posenet.py walking.mp4 /home/data/output.mp4
+./posenet.py /dev/video0 /home/data/output.mp4
+exit
+ls
+arduino-cli 
+arduino-cli boards list
+arduino-cli board list
+exit
+ls
+arduino-cli 
+cd ..
+exit
+arduino-cli 
+arduino-cli board list
+ls
+exit
+ls
+arduino-cli config init
+arduino-cli sketch new blink
+ls
+cd blink/
+ls
+arduino-cli core list
+vim blink.ino 
+arduino-cli core update-index
+arduino-cli core install arduino:avr
+arduino-cli compile --fqbn arduino:avr:uno blink
+cd ..
+arduino-cli compile --fqbn arduino:avr:uno blink
+arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno blink
+exit
+ls
+cd blink/
+ls
+cd ..
+rm -r blink/
+pip
+mkdir arduino
+cd arduino/
+mkdir serial
+cd serial/
+vim serial.ino
+cd ..
+rm -r serial/
+arduino-cli sketch new serial
+cd serial/
+vim serial.ino
+pip install pyserial
+vim serial.py
+python3 serial.py 
+vim serial.py
+python3 serial.py 
+pip3 install pyserial
+python3
+cd ..
+python3
+cp arduino/serial/serial.py .
+ls
+vim serial.py
+python3 serial.py 
+vim serial.py
+python3 serial.py 
+vim serial.py
+python3 serial.py 
+python3
+rm serial.py 
+python3
+ls
+vim demo.py
+python3 demo.py 
+vim demo.py
+python3 demo.py 
+vim demo.py
+python3 demo.py 
+clear
+ls
+cd arduino/
+ls
+rm -r serial/
+ls
+arduino-cli sketch new demo
+cd demo/
+vim demo.ino 
+arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno demo
+arduino-cli compile --fqbn arduino:avr:uno demo
+cd ..
+arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno demo
+arduino-cli compile --fqbn arduino:avr:uno demo
+arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno demo
+cd ..
+python3 demo.py 
+cd arduino/demo/
+vim demo.ino 
+cd ..
+arduino-cli compile --fqbn arduino:avr:uno demo
+vim deml/demo.ino 
+ls
+vim demo/demo.ino 
+arduino-cli compile --fqbn arduino:avr:uno demo
+arduino-cli compile --fqbn arduino:avr:uno --verbose demo
+arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno --verbose demo
+cd ..
+python3 demo.py 
+vim arduino/demo/demo.ino 
+cd arduino/
+arduino-cli compile --fqbn arduino:avr:uno --verbose demo
+arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno --verbose demo
+cd ..
+python3 demo.py 
+vim arduino/demo/demo.ino 
+cd arduino/
+arduino-cli compile --fqbn arduino:avr:uno --verbose demo
+arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno --verbose demo
+cd ..
+python3 demo.py 
+vim arduino/demo/demo.ino 
+cd arduino/
+arduino-cli compile --fqbn arduino:avr:uno --verbose demo
+arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno --verbose demo
+cd ..
+python3 demo.py
+vim arduino/demo/demo.ino 
+cd arduino/
+arduino-cli compile --fqbn arduino:avr:uno --verbose demo
+arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno --verbose demo
+cd ..
+python3 demo.py 
+clear
+exit
