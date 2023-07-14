@@ -25,7 +25,7 @@ class ObjectDetection:
                 self.arduino.write(bytes('12', 'utf-8'))
                 time.sleep(0.05)
                 data = self.arduino.readline()
-                print(data)
+                #print(data)
             else:
                 self.arduino.write(bytes('1', 'utf-8'))
                 time.sleep(0.05)
