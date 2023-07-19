@@ -1,4 +1,4 @@
-Certainly! Here's the updated code that uses a loop tort rclpyclpy
+ertainly! Here's the updated code that uses a loop tort rclpyclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
 from vision_msgs.msg import Detection2D, Detection2DArray, BoundingBox2D, ObjectHypothesisWithPose
