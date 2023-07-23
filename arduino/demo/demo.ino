@@ -4,7 +4,7 @@ void setup() {
  Serial.setTimeout(1);
  pinMode(LED_BUILTIN, OUTPUT);
  digitalWrite(LED_BUILTIN, LOW);
- delay(2000);
+ delay(1000);
 }
 void loop() {
  while (!Serial.available());
