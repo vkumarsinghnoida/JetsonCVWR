@@ -4,9 +4,13 @@ import sys
 import serial
 import time
 import rclpy
+from rclpy.node import Node
+from std_msgs.msg import String
 
-class ObjectDetection:
+class ObjectDetection(Node):
     def __init__(self, network='ssd-mobilenet-v2', input='/dev/video0', output='/home/output.mp4', overlay='box,labels,conf', threshold=0.5):
+        super().__init__('detector')
+        self.publisher_ = self.create_publisher(String, 'topic', 10)
         self.net = detectNet(network, threshold=threshold)
         self.overlay = overlay
         self.video_source = videoSource(input)
@@ -16,12 +20,15 @@ class ObjectDetection:
 
     def run(self):
         self.is_running = True
+        msg = String()
 
         while self.is_running:
             img = self.video_source.Capture()
             detections = self.net.Detect(img, overlay=self.overlay)
             self.video_output.Render(img)
             print(detections)
+            msg.data = str(detections)
+            self.publisher_.publish(msg)
             if len(detections):
                 self.arduino.write(bytes('12', 'utf-8'))
                 time.sleep(0.05)
@@ -36,8 +43,11 @@ class ObjectDetection:
                 break
 
 def main(args):
+    rclpy.init()
     obj_detection = ObjectDetection()
     obj_detection.run()
+    obj_detection.destroy_node()
+    rclpy.shutdown()
 
 if __name__ == '__main__':
     main(sys.argv)
