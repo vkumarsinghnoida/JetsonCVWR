@@ -11,7 +11,7 @@ void loop() {
  x = Serial.readString().toInt();
  if (x == 12){
   digitalWrite(LED_BUILTIN, HIGH);
-  delay(500);
+  delay(2000);
  }
  else{
   digitalWrite(LED_BUILTIN, LOW);
